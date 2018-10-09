@@ -14,7 +14,6 @@ fun main(args: Array<String>) {
 
 
 fun Application.calls(){
-    val jsonResponse = """{"id": 1,"name": "Joao Alves","username": "joao.alves","email": "joao.alves@example.com"}"""
 
     routing {
         get("/") {
@@ -22,7 +21,7 @@ fun Application.calls(){
         }
 
         get("/same") {
-            call.respondText(jsonResponse, ContentType.Application.Json)
+            call.respondText("Same same", ContentType.Application.Json)
         }
     }
 }
