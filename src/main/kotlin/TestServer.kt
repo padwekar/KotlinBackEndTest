@@ -10,7 +10,7 @@ import io.ktor.server.netty.*
 import java.time.LocalDate
 
 fun main(args: Array<String>) {
-        embeddedServer(Netty, 8080,watchPaths = listOf("Server/src/main/kotlin"),module = Application::calls).start(wait = true)
+        embeddedServer(Netty, 8080,module = Application::calls).start(wait = true)
 }
 
 
