@@ -26,8 +26,7 @@ fun Application.calls(){
         }
 
         get("/date") {
-
-            call.respondText(LocalDate.now().toString(), ContentType.Application.Json)
+            call.respondText(LocalDate.now().toString(), ContentType.Text.Html)
         }
     }
 }
