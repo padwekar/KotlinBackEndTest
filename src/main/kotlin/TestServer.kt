@@ -8,6 +8,7 @@ import io.ktor.routing.routing
 import io.ktor.routing.get
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import java.time.LocalDate
 
 
 fun main(args: Array<String>) {
@@ -23,6 +24,10 @@ fun Application.calls(){
 
         get("/name") {
             call.respondText("Saurabh Padwekar", ContentType.Text.Html)
+        }
+
+        get("/date") {
+            call.respondText(LocalDate.now().toString(), ContentType.Any)
         }
 
     }
