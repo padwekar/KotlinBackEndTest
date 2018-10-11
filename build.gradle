@@ -35,8 +35,9 @@ dependencies {
     compile 'org.slf4j:slf4j-nop:1.7.25'
     compile "io.ktor:ktor:$ktor_version" // ktor dependency
     compile "io.ktor:ktor-server-netty:$ktor_version" // ktor netty dependency
-
+    compile("io.ktor:ktor-gson:$ktor_version") //gson
 }
+
 jar { // To Build a jar
     manifest {
         attributes(
