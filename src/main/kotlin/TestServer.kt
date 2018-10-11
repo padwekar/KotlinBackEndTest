@@ -22,11 +22,11 @@ fun Application.calls(){
             call.respondText("Hello Healer", ContentType.Text.Html)
         }
 
-        get("/name") {
-            call.respondText("Saurabh Padwekar", ContentType.Text.Html)
+        get("/greet") {
+            call.respondText("Hello Saurabh Padwekar", ContentType.Text.Html)
         }
 
-        get("/date") {
+        get("/bestdate") {
             call.respondText(LocalDate.now().toString(), ContentType.Any)
         }
 
