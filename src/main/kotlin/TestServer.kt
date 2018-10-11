@@ -14,9 +14,6 @@ fun main(args: Array<String>) {
 }
 
 fun Application.calls(){
-
-    embeddedServer(Netty, 8080,module = Application::calls).start(wait = true)
-
     routing {
         get("/") {
             call.respondText("Hello Healer", ContentType.Text.Html)
