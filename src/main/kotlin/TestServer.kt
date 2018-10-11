@@ -9,6 +9,7 @@ import io.ktor.routing.get
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
+
 fun main(args: Array<String>) {
         embeddedServer(Netty, 8080,module = Application::calls).start(wait = true)
 }
@@ -18,6 +19,11 @@ fun Application.calls(){
         get("/") {
             call.respondText("Hello Healer", ContentType.Text.Html)
         }
+
+        get("/name") {
+            call.respondText("Saurabh Padwekar", ContentType.Text.Html)
+        }
+
     }
 }
 
