@@ -11,7 +11,8 @@ import io.ktor.server.netty.Netty
 
 
 fun main(args: Array<String>) {
-        embeddedServer(Netty, 8080,module = Application::calls).start(wait = true)
+    val port = if (System.getenv("PORT").isNullOrEmpty()) 8080 else Integer.parseInt(System.getenv("PORT"))
+    embeddedServer(Netty, port,module = Application::calls).start(wait = true)
 }
 
 fun Application.calls(){
